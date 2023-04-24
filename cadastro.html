@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <nav>
+        <ul>
+            <li><a href="cadastro.html">Cadastro de uma ordem de serviço</a></li>
+            <li><a href="Informações.html">Informações de tipos comuns de defeitos em celular</a></li>
+            <li><a href="Revenda.html">Revenda de celular usado</a></li>
+            <li><a href="RevendaAcessorios.html">Revenda de acessórios</a></li>
+            <li><a href="ServiçosDeSoftware.html">Serviços de software</a></li>
+            <li><a href="Acompanhamento.html">Acompanhamento de serviço</a></li>
+            <li><a href="Home.html">Home</a></li>
+        </ul>
+    </nav>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<!-- Cadastro de uma ordem de serviço
+
+● Nome do cliente: O sistema deverá permitir que o cliente entre com seu nome.
+● CPF do cliente: O sistema deverá permitir que o cliente entre com seu CPF.
+● Endereço do cliente. O sistema deverá permitir que o cliente entre com seu
+endereço (logradouro, CEP, Cidade e estado).
+● Modelo do celular: O usuário deverá escolher o tipo do seu celular por meio de
+uma lista.
+● Relato de defeito: O sistema deverá permitir o cliente inserir um texto informando o
+defeito que seu celular se encontra.
+● Imagem do aparelho: O sistema deverá permitir o cliente inserir uma foto do
+aparelho -->
+<body id="backgroundH6">
+  <h1>Cadastro de uma ordem de serviço</h1>
+  <form>
+    <label>Nome:<br><input type="text" id="User" name="Name"placeholder="Nome"/></label><br>
+    <label for="cpf">CPF:</label><br><input type="text" id="cpf" name="cpf"placeholder="123.456.789-10" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"required><br>
+    <label>Endereço:<br><input type="text" id="User" name="endereço"placeholder="Logradouro"/>
+          <input type="number" id="User" name="CEP" placeholder="CEP"/>
+          <input type="text" id="User" name="endereço"placeholder="Cidade"/>
+          <input type="text" id="User" name="endereço"placeholder="Estado"/>
+    </label><br>
+    <label for="celular">Tipo de celular:</label>
+    <select id="celular" name="celular">
+      <option value="">Selecione um tipo</option>
+      <option value="iphone">iPhone</option>
+      <option value="samsung">Samsung</option>
+      <option value="xiaomi">Xiaomi</option>
+      <option value="motorola">Motorola</option>
+      <option value="asus">Asus</option>
+    </select><br>
+    <label for="texto">Digite 3 linhas de texto:</label><br>
+    <textarea id="texto" name="texto" rows="3"></textarea><br>
+    <form action="processar.php" method="post" enctype="multipart/form-data">
+      <label for="imagem">Selecione uma imagem:</label>
+      <input type="file" id="imagem" name="imagem">
+      <input type="submit" value="Enviar">
+    </form>
+
+  </form>
+</body>
+</html>
